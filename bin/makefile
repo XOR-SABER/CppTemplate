@@ -1,10 +1,9 @@
 CC = g++ 
-PROG = RPGTEST
 CC_FLAGS_DEBUG = -Wall -Wextra -pedantic 
 CC_FLAGS_DEBUG2 = -Wshadow  -Wunreachable-code -fsanitize=address
 SANITIZE = -fsanitize=address -g
 CC_FLAGS = -std=c++2a -O3
-SC = source/
+SC = ../src/
 PROG = Name
 
 all:
