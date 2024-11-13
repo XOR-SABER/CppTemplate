@@ -1,10 +1,13 @@
 CC = g++ 
 CC_FLAGS_DEBUG = -Wall -Wextra -pedantic 
 CC_FLAGS_DEBUG2 = -Wshadow  -Wunreachable-code -fsanitize=address
-SANITIZE = -fsanitize=address -g
-CC_FLAGS = -std=c++2a -O3
-SC = ../src/
+SANITIZE = -fsanitize=address -g 
+CC_FLAGS = -std=c++2a -I${HEADERS} -O3 -pthread
+SC = ../source/
+HEADERS = ../headers/
 PROG = Name
+
+deps: $(header)
 
 all:
 	${CC} ${CC_FLAGS} -c ${SC}*.cc
